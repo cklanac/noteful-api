@@ -8,7 +8,10 @@
   "main": "server.js",
   "scripts": {
     "start": "npm run restore && node server.js",
-    "restore": "cp clean.json db.json"
+    "restore": "cp clean.json db.json",
+    "refresh": "export SHELL=/bin/bash; chokidar 'db.json' -c 'refresh'",
+    "//refresh": "refresh command only works on the first change :(  ",
+    "//FAQ": "https://glitch.com/help/console-files/"
   },
   "dependencies": {
     "express": "^4.16.3",
